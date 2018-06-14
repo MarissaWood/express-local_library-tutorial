@@ -17,7 +17,7 @@ var app = express()
 
 app.use(helmet())
 var mongoose = require('mongoose')
-var mongoDB = process.env.MONGDB_URI || 'mongodb://user123:garlicnoodle14@ds151840.mlab.com:51840/local_library'
+var mongoDB = process.env.MONGDB_URI
 mongoose.connect(mongoDB)
 mongoose.Promise = global.Promise
 var db = mongoose.connection
